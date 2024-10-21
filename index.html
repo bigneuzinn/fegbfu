@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Produtos Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Faça sua pesquisa">
+            <button>🔍</button>
+        </div>
+        <div class="cart">🛒</div>
+        
+    </header>
+
+    <section class="banner">
+        <img src="img/Rectangle 25.png" alt="Academia" class="banner-img">
+    </section>
+
+    <section class="promo">
+        <h2>Melhores Preços Com A gente!!</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="img/bermuda1.png" alt="Bermuda">   
+                <p>Bermuda esportiva com 5% de desconto!!</p>
+                <span>R$50,00</span>
+            </div>
+            <div class="product">
+                <img src="img/Rectangle 7.png" alt="Camiseta">
+                <p>Camiseta dry-fit com 5% de desconto!!</p>
+                <span>R$80,00</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <ul>
+            <li><a href="#">Tênis Esportivos</a></li>
+            <li><a href="#">Garrafas</a></li>
+            <li><a href="#">Whey's e Creatina</a></li>
+        </ul>
+    </section>
+
+    <section class="featured">
+        <img src="img/conjunto.png" alt="Conjunto esportivo" class="featured-product">
+    </section>
+
+    <footer>
+        <div class="footer-text">
+            <p>Confira nossas redes sociais!</p>
+            <div class="social-icons">
+                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="img/twitter.png" alt="X (Twitter)"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        
+        .search-bar button {
+            padding: 5px 10px;
+            background-color: #555;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .cart {
+            font-size: 1.5em;
+        }
+        
+        .banner {
+            width: 100%;
+            height: 300px;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .promo {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .promo h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .product {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+
+
+
+    </style>
+</html>
