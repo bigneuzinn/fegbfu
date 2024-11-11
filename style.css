@@ -82,108 +82,89 @@ body {
     font-size: 18px;
 }
 
-button.botao-adicionar {
-    background-color: #ff6200;
+/* Estilo do Modal de Carrinho */
+.modal-carrinho {
+    display: none; /* Inicia oculto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 90%;
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+}
+
+.conteudo-modal-carrinho h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.itens-carrinho {
+    list-style: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.itens-carrinho li {
+    font-size: 1em;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #4b4a4a;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-carrinho p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.botao-finalizar,
+.fechar-carrinho {
+    background-color: #28a745;
+    color: white;
     border: none;
-    padding: 10px;
-    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
     cursor: pointer;
     margin-top: 10px;
 }
 
-button.botao-adicionar:hover {
-    background-color: #e55900;
+.fechar-carrinho {
+    background-color: #dc3545;
+    margin-left: 5px;
 }
 
-.rodape {
-    background-color: #444;
-    text-align: center;
-    padding: 20px;
+.botao-finalizar:hover {
+    background-color: #218838;
 }
 
-.texto-rodape p {
-    margin-bottom: 10px;
+.fechar-carrinho:hover {
+    background-color: #c82333;
 }
 
-.icones-sociais img {
-    width: 30px;
-    margin: 0 10px;
-}
-
-/* Botão de Adicionar ao Carrinho */
-.botao-adicionar {
-    background: #007bff;
-    color: #fff; 
-    border: none; 
-    padding: 10px 15px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    font-size: 1rem;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.botao-adicionar:hover {
-    background: #0056b3; 
-    transform: translateY(-2px); 
-}
-
-.botao-adicionar:active {
-    background: #004494; 
-    transform: translateY(0);
-}
-
-/* Estilos do modal do carrinho */
-.cart-modal {
-    display: none;
+/* Fundo escuro para o modal */
+.modal-carrinho:before {
+    content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: -1;
 }
 
-.cart-modal-content {
-    background-color: rgb(221, 201, 18);
-    width: 300px;
-    padding: 20px;
-    margin: 100px auto;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.cart-items {
-    list-style-type: none;
-    padding: 0;
-}
-
-.cart-items li {
-    padding: 5px 0;
-}
-
-.cart-total {
-    margin-top: 20px;
-}
-
-.checkout-btn, .close-cart {
-    margin-top: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.checkout-btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.close-cart {
-    background-color: #e7e6e6;
-    color: #333;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}

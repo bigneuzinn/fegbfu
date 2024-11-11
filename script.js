@@ -1,10 +1,37 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Seleciona todos os botões de adicionar ao carrinho
+document.addEventListener("DOMContentLoaded", function () {
     const botoesAdicionar = document.querySelectorAll('.adicionar-carrinho');
-    
+    const itensCarrinho = document.querySelector('.itens-carrinho');
+    const valorTotal = document.querySelector('.valor-total-carrinho');
+    const modalCarrinho = document.querySelector('.modal-carrinho');
+    const fecharCarrinhoBtn = document.querySelector('.fechar-carrinho');
+    const botaoFinalizar = document.querySelector('.botao-finalizar');
+    let carrinho = [];
+    let total = 0;
+
+    // atualizar a lista do carrinho e o valor total
+    function atualizarCarrinho() {
+        itensCarrinho.innerHTML = '';
+        carrinho.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.nome} - R$${item.preco.toFixed(2)}`;
+            itensCarrinho.appendChild(li);
+        });
+        valorTotal.textContent = total.toFixed(2);
+    }
+
+    // adicionar itens ao carrinho
     botoesAdicionar.forEach(botao => {
-        // Adiciona um evento de clique a cada botão
-        botao.addEventListener('click', function () {
+        botao.addEventListener('click', (e) => {
+            const produtoDiv = e.target.closest('.produto');
+            const nome = produtoDiv.querySelector('p').textContent;
+            const preco = parseFloat(produtoDiv.querySelector('span').textContent.replace('R$', '').replace(',', '.'));
+
+            // Adiciona o produto ao carrinho e atualiza o total
+            carrinho.push({ nome, preco });
+            total += preco;
+            atualizarCarrinho();
+
+            // Mostra uma notificação de sucesso
             Swal.fire({
                 icon: 'success',
                 title: 'Item adicionado ao carrinho!',
@@ -13,97 +40,37 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Seleciona todos os botões de adicionar ao carrinho
-    const botoesAdicionar = document.querySelectorAll('.adicionar-carrinho');
-    const cartModal = document.querySelector('.cart-modal');
-    const closeCartButton = document.querySelector('.close-cart');
-    const cartItemsList = document.querySelector('.cart-items');
-    const cartTotalValue = document.querySelector('.cart-total-value');
-    const checkoutButton = document.querySelector('.checkout-btn');
-    
-    // Array para armazenar os itens do carrinho
-    let cart = [];
+    // Abre o modal do carrinho
+    document.querySelector('.icone-carrinho').addEventListener('click', () => {
+        modalCarrinho.style.display = 'block';
+    });
 
-    // Função para atualizar a interface do carrinho
-    function updateCart() {
-        // Limpa a lista do carrinho
-        cartItemsList.innerHTML = '';
-        let total = 0;
+    // Fecha o modal do carrinho
+    fecharCarrinhoBtn.addEventListener('click', () => {
+        modalCarrinho.style.display = 'none';
+    });
 
-        // Adiciona os itens ao carrinho e calcula o total
-        cart.forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = `${item.nome} - R$${item.preco}`;
-            cartItemsList.appendChild(li);
-            total += parseFloat(item.preco);
-        });
-
-    // Atualiza o valor total
-        cartTotalValue.textContent = total.toFixed(2);
-    }
-
-    // Função para mostrar o modal do carrinho
-    function openCart() {
-        cartModal.style.display = 'block';
-    }
-
-    // Função para fechar o modal do carrinho
-    function closeCart() {
-        cartModal.style.display = 'none';
-    }
-
-    // Adiciona um evento de clique para abrir o carrinho
-    document.querySelector('.cart').addEventListener('click', openCart);
-
-    // Adiciona um evento de clique para fechar o carrinho
-    closeCartButton.addEventListener('click', closeCart);
-
-    // Adiciona um evento de clique ao botão de finalizar compra
-    checkoutButton.addEventListener('click', function() {
-        if (cart.length > 0) {
-            Swal.fire({
-                icon: 'success',
-                title: 'Compra Finalizada!',
-                text: `Total: R$${cartTotalValue.textContent}`,
-                showConfirmButton: false,
-                timer: 2000
-            });
-            cart = []; // Limpa o carrinho
-            updateCart(); // Atualiza a interface
-            closeCart(); // Fecha o carrinho
-        } else {
+    // Finalizar a compra
+    botaoFinalizar.addEventListener('click', () => {
+        if (carrinho.length === 0) {
             Swal.fire({
                 icon: 'warning',
-                title: 'Carrinho Vazio',
-                text: 'Adicione produtos ao carrinho antes de finalizar.',
-                showConfirmButton: true
+                title: 'Seu carrinho está vazio!',
+                text: 'Adicione itens ao carrinho antes de finalizar a compra.',
             });
-        }
-    });
-
-    // Função para adicionar produtos ao carrinho
-    botoesAdicionar.forEach(botao => {
-        botao.addEventListener('click', function () {
-            const produto = this.closest('.product');
-            const nome = produto.querySelector('p').textContent;
-            const preco = produto.querySelector('span').textContent.replace('R$', '').trim();
-
-            // Adiciona o item ao carrinho
-            cart.push({ nome, preco });
-
-            // Exibe um alerta informando que o produto foi adicionado
+        } else {
             Swal.fire({
                 icon: 'success',
-                title: 'Item adicionado ao carrinho!',
-                showConfirmButton: false,
-                timer: 1500
+                title: 'Compra finalizada com sucesso!',
+                text: 'Obrigado por comprar conosco.',
+            }).then(() => {
+                // Esvaziar o carrinho
+                carrinho = [];
+                total = 0;
+                atualizarCarrinho();
+                modalCarrinho.style.display = 'none'; // Fecha o modal
             });
-
-            // Atualiza o carrinho
-            updateCart();
-        });
+        }
     });
 });
