@@ -8,122 +8,123 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <header>
+    <div class="cabecalho">
         <div class="logo">LOGO</div>
-        <div class="search-bar">
+        <div class="barra-de-pesquisa">
             <input type="text" placeholder="Faça sua pesquisa">
             <button>🔍</button>
         </div>
-        <div class="cart">🛒</div>
-    </header>
-
-    <!-- Adiciona o modal do carrinho -->
-<div class="cart-modal">
-    <div class="cart-modal-content">
-        <h3>Seu Carrinho</h3>
-        <ul class="cart-items"></ul>
-        <div class="cart-total">
-            <p>Total: R$<span class="cart-total-value">0,00</span></p>
-        </div>
-        <button class="checkout-btn">Finalizar Compra</button>
-        <button class="close-cart">Fechar</button>
+        <div class="icone-carrinho">🛒</div>
     </div>
-</div>
 
+    <div class="modal-carrinho">
+        <div class="conteudo-modal-carrinho">
+            <h3>Seu Carrinho</h3>
+            <ul class="itens-carrinho"></ul>
+            <div class="total-carrinho">
+                <p>Total: R$<span class="valor-total-carrinho">0,00</span></p>
+            </div>
+            <button class="botao-finalizar">Finalizar Compra</button>
+            <button class="fechar-carrinho">Fechar</button>
+        </div>
+    </div>
 
-    <section class="banner">
-        <img src="img/fundo.png" alt="Banner da Academia" class="banner-img">
-    </section>
+    <div class="banner">
+        <img src="img/fundo.png" alt="Banner da Academia" class="img-banner">
+    </div>
 
-    <section class="promo">
+    <div class="promocao">
         <h2>Melhores Preços Com A gente!!</h2>
-        <div class="product-grid">
-            <div class="product">
+        <div class="grade-produtos">
+            <div class="produto">
                 <img src="img/bermuda1.png" alt="Bermuda Esportiva">
                 <p>Bermuda Esportiva</p>
                 <span>R$50,00</span>
                 <p>5% de desconto! Ideal para atividades físicas.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+                <button class="botao-adicionar">Adicionar ao carrinho</button>
             </div>
 
-            <div class="product">
+            <div class="produto">
                 <img src="img/camiseta.png" alt="Camiseta Dry-Fit">
                 <p>Camiseta Dry-Fit</p>
                 <span>R$80,00</span>
                 <p>5% de desconto! Confortável e respirável.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-            <div class="product">
-                <img src="img/TenisAdidas.png" alt="Tênis Esportivo">
-                <p>Tênis Esportivo</p>
-                <span>R$120,00</span>
-                <p>Perfeito para corridas e treinos intensos.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+                <button class="botao-adicionar">Adicionar ao carrinho</button>
             </div>
 
-            <div class="product">
-                <img src="img/garrafinha.png" alt="Garrafa Esportiva">
-                <p>Garrafa Esportiva</p>
-                <span>R$20,00</span>
-                <p>Hidratação prática para seus treinos.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+            <!-- Outros produtos aqui... -->
+
+            <div class="produto">
+                <img src="img/TenisAdidas.png" alt="Camiseta Vermelha">
+                <p>Camiseta Vermelha</p>
+                <span>R$40,00</span>
+                <p>Estilo casual para uso diário.</p>
+                <button class="botao-adicionar">Adicionar ao carrinho</button>
             </div>
 
-            <div class="product">
-                <img src="img/garrafinha2.png" alt="Garrafa de Água">
-                <p>Garrafa de Água</p>
-                <span>R$15,00</span>
-                <p>Leve e portátil para o dia a dia.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+            <div class="produto">
+                <img src="img/garrafinha.png" alt="Camiseta Vermelha">
+                <p>Camiseta Vermelha</p>
+                <span>R$40,00</span>
+                <p>Estilo casual para uso diário.</p>
+                <button class="botao-adicionar">Adicionar ao carrinho</button>
             </div>
 
-            <div class="product">
-                <img src="img/whey.png" alt="Suplemento Proteico">
-                <p>Suplemento Proteico</p>
-                <span>R$90,00</span>
-                <p>Fornece energia e ajuda na recuperação.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+            <div class="produto">
+                <img src="img/garrafinha2.png" alt="Camiseta Vermelha">
+                <p>Camiseta Vermelha</p>
+                <span>R$40,00</span>
+                <p>Estilo casual para uso diário.</p>
+                <button class="botao-adicionar">Adicionar ao carrinho</button>
             </div>
 
-            <div class="product">
-                <img src="img/creatina.png" alt="Creatina">
-                <p>Creatina</p>
-                <span>R$60,00</span>
-                <p>Melhora o desempenho em atividades físicas.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+            <div class="produto">
+                <img src="img/whey.png" alt="Camiseta Vermelha">
+                <p>Camiseta Vermelha</p>
+                <span>R$40,00</span>
+                <p>Estilo casual para uso diário.</p>
+                <button class="botao-adicionar">Adicionar ao carrinho</button>
             </div>
 
-            <div class="product">
-                <img src="img/nike.png" alt="Tênis Preto">
-                <p>Tênis Preto</p>
-                <span>R$110,00</span>
-                <p>Confortável e estiloso para o dia a dia.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+            <div class="produto">
+                <img src="img/creatina.png" alt="Camiseta Vermelha">
+                <p>Camiseta Vermelha</p>
+                <span>R$40,00</span>
+                <p>Estilo casual para uso diário.</p>
+                <button class="botao-adicionar">Adicionar ao carrinho</button>
             </div>
 
-            <div class="product">
+            <div class="produto">
+                <img src="img/nike.png" alt="Camiseta Vermelha">
+                <p>Camiseta Vermelha</p>
+                <span>R$40,00</span>
+                <p>Estilo casual para uso diário.</p>
+                <button class="botao-adicionar">Adicionar ao carrinho</button>
+            </div>
+
+            <div class="produto">
                 <img src="img/camiseta2.png" alt="Camiseta Vermelha">
                 <p>Camiseta Vermelha</p>
                 <span>R$40,00</span>
                 <p>Estilo casual para uso diário.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+                <button class="botao-adicionar">Adicionar ao carrinho</button>
             </div>
 
-        </div>
-    </section>
 
-    <footer>
-        <div class="footer-text">
+        </div>
+    </div>
+
+    <div class="rodape">
+        <div class="texto-rodape">
             <p>Confira nossas redes sociais!</p>
-            <div class="social-icons">
+            <div class="icones-sociais">
                 <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
                 <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
                 <a href="#"><img src="img/twitter.png" alt="X (Twitter)"></a>
             </div>
         </div>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
-    
 </body>
 </html>

@@ -1,127 +1,117 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #474747;
+    background-color: #333;
+    color: #fff;
 }
 
-header {
+.cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+    padding: 20px;
+    background-color: #444;
 }
 
-.search-bar input {
+.logo {
+    font-size: 24px;
+}
+
+.barra-de-pesquisa {
+    display: flex;
+    align-items: center;
+}
+
+.barra-de-pesquisa input {
     padding: 5px;
-    border-radius: 5px;
-    border: none;
+    font-size: 16px;
 }
 
-.search-bar button {
-    padding: 5px 10px;
-    background-color: #555;
-    border: none;
-    border-radius: 5px;
-    color: white;
-}
-
-.cart {
-    font-size: 1.5em;
+.icone-carrinho {
+    font-size: 24px;
 }
 
 .banner {
-    width: 100%;
-    height: 300px;
+    text-align: center;
 }
 
-.banner-img {
+.img-banner {
     width: 100%;
-    height: 100%;
+    max-height: 250px;
     object-fit: cover;
 }
 
-
-.promo {
+.promocao h2 {
     text-align: center;
-    padding: 20px;
+    font-size: 28px;
+    margin: 20px 0;
 }
 
-.promo h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-}
-
-.product-grid {
-    width: 100%;
+.grade-produtos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Três produtos por linha */
     gap: 20px;
     padding: 20px;
-    align-items: center;
-    
 }
 
-.product {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.product:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-.product img {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
-}
-
-.product p {
-    font-size: 0.9em;
-    margin: 5px 0;
-}
-
-.product span {
-    display: block;
-    font-weight: bold;
-    color: #e74c3c;
-    margin-bottom: 10px;
-}
-
-footer {
-    background-color: goldenrod;
-    color: white;
+.produto {
+    background-color: #555;
     padding: 20px;
     text-align: center;
+    border-radius: 8px;
 }
 
-.footer-text p {
+.produto img {
+    max-width: 100%;
+    height: auto;
     margin-bottom: 10px;
 }
 
-.social-icons a {
+.produto p {
+    margin: 10px 0;
+}
+
+.produto span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button.botao-adicionar {
+    background-color: #ff6200;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button.botao-adicionar:hover {
+    background-color: #e55900;
+}
+
+.rodape {
+    background-color: #444;
+    text-align: center;
+    padding: 20px;
+}
+
+.texto-rodape p {
+    margin-bottom: 10px;
+}
+
+.icones-sociais img {
+    width: 30px;
     margin: 0 10px;
 }
 
-.social-icons img {
-    width: 30px;
-    height: 30px;
-}
-
-.adicionar-carrinho {
+/* Botão de Adicionar ao Carrinho */
+.botao-adicionar {
     background: #007bff;
     color: #fff; 
     border: none; 
@@ -132,12 +122,12 @@ footer {
     transition: background 0.3s, transform 0.2s;
 }
 
-.adicionar-carrinho:hover {
+.botao-adicionar:hover {
     background: #0056b3; 
     transform: translateY(-2px); 
 }
 
-.adicionar-carrinho:active {
+.botao-adicionar:active {
     background: #004494; 
     transform: translateY(0);
 }
@@ -155,7 +145,7 @@ footer {
 }
 
 .cart-modal-content {
-    background-color: white;
+    background-color: rgb(221, 201, 18);
     width: 300px;
     padding: 20px;
     margin: 100px auto;
@@ -182,6 +172,18 @@ footer {
     cursor: pointer;
 }
 
+.checkout-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
 .close-cart {
-    background-color: #ccc;
+    background-color: #e7e6e6;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
 }
