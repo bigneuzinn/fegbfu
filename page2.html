@@ -11,9 +11,10 @@
     <div class="cabecalho">
         <div class="logo">LOGO</div>
         <div class="barra-de-pesquisa">
-            <input type="text" placeholder="Faça sua pesquisa">
-            <button>🔍</button>
+            <input type="text" id="pesquisa" placeholder="Faça sua pesquisa">
+            <button id="botao-pesquisar">🔍</button>
         </div>
+        
         <div class="icone-carrinho">🛒</div>
     </div>
 
@@ -37,104 +38,154 @@
         <h2>Melhores Preços Com A gente!!</h2>
     </div>
     
-        <div class="grade-produtos">
-            <div class="produto">
-                <img src="img/bermuda1.png" alt="Bermuda Esportiva">
-                <p>Bermuda Esportiva</p>
-                <span>R$50,00</span>
-                <p>5% de desconto! Ideal para atividades físicas.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-
-            <div class="produto">
-                <img src="img/camiseta.png" alt="Camiseta Dry-Fit">
-                <p>Camiseta Dry-Fit</p>
-                <span>R$80,00</span>
-                <p>5% de desconto! Confortável e respirável.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-
-            <!-- Outros produtos aqui... -->
-
-            <div class="produto">
-                <img src="img/TenisAdidas.png" alt="Camiseta Vermelha">
-                <p>Camiseta Vermelha</p>
-                <span>R$40,00</span>
-                <p>Estilo casual para uso diário.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-
-            <div class="produto">
-                <img src="img/garrafinha.png" alt="Camiseta Vermelha">
-                <p>Camiseta Vermelha</p>
-                <span>R$40,00</span>
-                <p>Estilo casual para uso diário.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-
-            <div class="produto">
-                <img src="img/garrafinha2.png" alt="Camiseta Vermelha">
-                <p>Camiseta Vermelha</p>
-                <span>R$40,00</span>
-                <p>Estilo casual para uso diário.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-
-            <div class="produto">
-                <img src="img/whey.png" alt="Camiseta Vermelha">
-                <p>Camiseta Vermelha</p>
-                <span>R$40,00</span>
-                <p>Estilo casual para uso diário.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-
-            <div class="produto">
-                <img src="img/creatina.png" alt="Camiseta Vermelha">
-                <p>Camiseta Vermelha</p>
-                <span>R$40,00</span>
-                <p>Estilo casual para uso diário.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-
-            <div class="produto">
-                <img src="img/nike.png" alt="Camiseta Vermelha">
-                <p>Camiseta Vermelha</p>
-                <span>R$40,00</span>
-                <p>Estilo casual para uso diário.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-
-            <div class="produto">
-                <img src="img/camiseta2.png" alt="Camiseta Vermelha">
-                <p>Camiseta Vermelha</p>
-                <span>R$40,00</span>
-                <p>Estilo casual para uso diário.</p>
-                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
-            </div>
-
-
+    <div class="grade-produtos">
+        <div class="produto">
+            <img src="img/bermuda1.png" alt="Bermuda Esportiva">
+            <p>Bermuda Esportiva</p>
+            <span>R$79,90</span>
+            <p>Confortável e resistente, ideal para treinos intensos ou atividades ao ar livre.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
         </div>
-    
 
-        <div class="retangulo-dourado2">
-            <div class="texto">
-                <h2>Saiba Mais Sobre Nós!</h2>
-                <p>
-                    Quer acompanhar todas as novidades e conhecer mais sobre o nosso trabalho? 
-                    Siga nossas redes sociais e fique por dentro de ofertas, dicas e conteúdos exclusivos!
-                </p>
-            </div>
-            <div class="redes-sociais">
-                <p>Confira nossas redes sociais!</p>
-                <div class="icones-sociais">
-                    <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
-                    <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
-                    <a href="#"><img src="img/twitter.png" alt="X (Twitter)"></a>
-                </div>
-            </div>
+        <div class="produto">
+            <img src="img/camiseta.png" alt="Camiseta Dry-Fit">
+            <p>Camiseta Dry-Fit</p>
+            <span>R$99,90</span>
+            <p>Tecnologia Dry-Fit que mantém o corpo seco durante o treino. Ideal para atividades físicas.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/TenisAdidas.png" alt="Tênis Adidas">
+            <p>Tenis Adidas</p>
+            <span>R$249,90</span>
+            <p>Desempenho e conforto para corridas e treinos de alta performance.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/garrafinha.png" alt="Garrafinha de Água">
+            <p>Garrafinha de Água</p>
+            <span>R$29,90</span>
+            <p>Garrafa prática e resistente para manter a hidratação durante os treinos.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/garrafinha2.png" alt="Garrafa Galão">
+            <p>Garrafa Galão (1L)</p>
+            <span>R$49,90</span>
+            <p>Ideal para quem treina pesado, com capacidade de 1 litro para hidratação constante.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/whey.png" alt="Whey Protein">
+            <p>Whey Protein</p>
+            <span>R$199,90</span>
+            <p>Suplemento proteico de alta qualidade para recuperação muscular pós-treino.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/creatina.png" alt="Creatina">
+            <p>Creatina Monohidratada</p>
+            <span>R$119,90</span>
+            <p>Aumente sua força e resistência muscular durante os treinos com creatina de alta pureza.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/nike.png" alt="Tênis Nike">
+            <p>Tenis Nike Air Zoom</p>
+            <span>R$399,90</span>
+            <p>Leve, confortável e com tecnologia de amortecimento para corredores e atletas.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/camiseta2.png" alt="Camiseta Esportiva">
+            <p>Camiseta Esportiva</p>
+            <span>R$79,90</span>
+            <p>Material leve e respirável, perfeito para atividades intensas na academia.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="img/shortcorrida.jpg" alt="Shorts de Corrida">
+            <p>Shorts de Corrida</p>
+            <span>R$89,90</span>
+            <p>Conforto e liberdade para seus treinos ao ar livre ou academia.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
         </div>
         
+        <div class="produto">
+            <img src="img/legging feminina.jpg" alt="Legging Feminina">
+            <p>Legging Feminina</p>
+            <span>R$129,90</span>
+            <p>Alta compressão e conforto para atividades físicas de alto impacto.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="produto">
+            <img src="img/jaquetaEsportiva.png" alt="Jaqueta Esportiva">
+            <p>Jaqueta Esportiva</p>
+            <span>R$189,90</span>
+            <p>Perfeita para treinos ao ar livre, ideal para o inverno e atividades externas.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="produto">
+            <img src="img/luvas_.jpg" alt="Luvas de Treinamento">
+            <p>Luvas de Treinamento</p>
+            <span>R$49,90</span>
+            <p>Proteja suas mãos durante os treinos de musculação e levantamento de peso.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="produto">
+            <img src="img/corda.jpeg" alt="Corda de Pular">
+            <p>Corda de Pular</p>
+            <span>R$39,90</span>
+            <p>Excelente para treinos de cardio e resistência. Leve e prática para levar para qualquer lugar.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="produto">
+            <img src="img/bola.jpg" alt="Bola de Exercício">
+            <p>Bola de Exercício</p>
+            <span>R$89,90</span>
+            <p>Aumente a flexibilidade e a força muscular com exercícios com bola de estabilidade.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+        
+        <div class="produto">
+            <img src="img/colchonete.jpg" alt="Colchonete para Exercícios">
+            <p>Colchonete para Exercícios</p>
+            <span>R$69,90</span>
+            <p>Proporcione conforto e estabilidade durante os seus treinos no chão.</p>
+            <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+        </div>
+    </div>  
+    
+    <footer class="redes-sociais">
+        <div class="texto">
+            <h2>Saiba Mais Sobre Nós!</h2>
+            <p>
+                Quer acompanhar todas as novidades e conhecer mais sobre o nosso trabalho? 
+                Siga nossas redes sociais e fique por dentro de ofertas, dicas e conteúdos exclusivos!
+            </p>
+        </div>
+        <div class="icones-sociais">
+            <p>Confira nossas redes sociais!</p>
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="img/twitter.png" alt="X (Twitter)"></a>
+        </div>
+    </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
+        <script src="script.js"></script>
+
+        
+    </body>
+    </html>

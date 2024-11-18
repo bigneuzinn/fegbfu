@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const botoesAdicionar = document.querySelectorAll('.adicionar-carrinho');
     const itensCarrinho = document.querySelector('.itens-carrinho');
     const valorTotal = document.querySelector('.valor-total-carrinho');
-    const modalCarrinho = document.querySelector('.modal-ca rrinho');
+    const modalCarrinho = document.querySelector('.modal-carrinho');
     const fecharCarrinhoBtn = document.querySelector('.fechar-carrinho');
     const botaoFinalizar = document.querySelector('.botao-finalizar');
     let carrinho = [];
@@ -73,4 +73,30 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const pesquisaInput = document.getElementById('pesquisa');
+    const botaoPesquisar = document.getElementById('botao-pesquisar');
+    const produtos = document.querySelectorAll('.produto');
+
+    // Função para filtrar os produtos com base no texto de pesquisa
+    const filtrarProdutos = () => {
+        const termoPesquisa = pesquisaInput.value.toLowerCase();
+
+        produtos.forEach(produto => {
+            const nomeProduto = produto.querySelector('p').textContent.toLowerCase();
+            
+            if (nomeProduto.includes(termoPesquisa)) {
+                produto.style.display = 'block';  // Mostra o produto
+            } else {
+                produto.style.display = 'none';  // Oculta o produto
+            }
+        });
+    };
+
+    // Ação ao pressionar a tecla "Enter" no campo de pesquisa
+    pesquisaInput.addEventListener('keyup', filtrarProdutos);
+
+    // Ação ao clicar no botão de pesquisa
+    botaoPesquisar.addEventListener('click', filtrarProdutos);
 });
