@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const botoesAdicionar = document.querySelectorAll('.adicionar-carrinho');
     const itensCarrinho = document.querySelector('.itens-carrinho');
     const valorTotal = document.querySelector('.valor-total-carrinho');
-    const modalCarrinho = document.querySelector('.modal-carrinho');
+    const modalCarrinho = document.querySelector('.modal-ca rrinho');
     const fecharCarrinhoBtn = document.querySelector('.fechar-carrinho');
     const botaoFinalizar = document.querySelector('.botao-finalizar');
     let carrinho = [];
