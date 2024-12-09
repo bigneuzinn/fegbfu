@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let carrinho = [];
     let total = 0;
 
-    // atualizar a lista do carrinho e o valor total
+   
     function atualizarCarrinho() {
         itensCarrinho.innerHTML = '';
         carrinho.forEach(item => {
@@ -19,19 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
         valorTotal.textContent = total.toFixed(2);
     }
 
-    // adicionar itens ao carrinho
+  
     botoesAdicionar.forEach(botao => {
         botao.addEventListener('click', (e) => {
             const produtoDiv = e.target.closest('.produto');
             const nome = produtoDiv.querySelector('p').textContent;
             const preco = parseFloat(produtoDiv.querySelector('span').textContent.replace('R$', '').replace(',', '.'));
 
-            // Adiciona o produto ao carrinho e atualiza o total
+           
             carrinho.push({ nome, preco });
             total += preco;
             atualizarCarrinho();
 
-            // Mostra uma notificação de sucesso
+            
             Swal.fire({
                 icon: 'success',
                 title: 'Item adicionado ao carrinho!',
@@ -41,17 +41,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Abre o modal do carrinho
     document.querySelector('.icone-carrinho').addEventListener('click', () => {
         modalCarrinho.style.display = 'block';
     });
 
-    // Fecha o modal do carrinho
     fecharCarrinhoBtn.addEventListener('click', () => {
         modalCarrinho.style.display = 'none';
     });
 
-    // Finalizar a compra
+
     botaoFinalizar.addEventListener('click', () => {
         if (carrinho.length === 0) {
             Swal.fire({
@@ -65,11 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 title: 'Compra finalizada com sucesso!',
                 text: 'Obrigado por comprar conosco.',
             }).then(() => {
-                // Esvaziar o carrinho
+                
                 carrinho = [];
                 total = 0;
                 atualizarCarrinho();
-                modalCarrinho.style.display = 'none'; // Fecha o modal
+                modalCarrinho.style.display = 'none'; 
             });
         }
     });
@@ -78,8 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pesquisaInput = document.getElementById('pesquisa');
     const botaoPesquisar = document.getElementById('botao-pesquisar');
     const produtos = document.querySelectorAll('.produto');
-
-    // Função para filtrar os produtos com base no texto de pesquisa
+1
     const filtrarProdutos = () => {
         const termoPesquisa = pesquisaInput.value.toLowerCase();
 
@@ -87,16 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const nomeProduto = produto.querySelector('p').textContent.toLowerCase();
             
             if (nomeProduto.includes(termoPesquisa)) {
-                produto.style.display = 'block';  // Mostra o produto
+                produto.style.display = 'block';  
             } else {
-                produto.style.display = 'none';  // Oculta o produto
+                produto.style.display = 'none'; 
             }
         });
     };
 
-    // Ação ao pressionar a tecla "Enter" no campo de pesquisa
+    
     pesquisaInput.addEventListener('keyup', filtrarProdutos);
 
-    // Ação ao clicar no botão de pesquisa
     botaoPesquisar.addEventListener('click', filtrarProdutos);
 });

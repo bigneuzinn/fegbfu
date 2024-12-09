@@ -1,4 +1,4 @@
-/* Estilo geral */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
     
 }
 
-/* Cabeçalho */
+
 .cabecalho {
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,15 @@ body {
 }
 
 .logo {
-    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo img {
+    max-width: 100px; 
+    height: auto; 
 }
 
 .barra-de-pesquisa {
@@ -40,7 +48,6 @@ body {
     font-size: 24px;
 }
 
-/* Banner */
 .banner {
     text-align: center;
     max-height: 250px;

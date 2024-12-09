@@ -4,154 +4,280 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Produtos Fitness</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <style>
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+cabeçalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.barra-pesquisa input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+}
+
+.barra-pesquisa button {
+    padding: 5px 10px;
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-left: 5px;
+}
+
+.banner {
+    width: 100%;
+    height: 200px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.conteúdo {
+    display: flex;
+    padding: 20px;
+    gap: 20px; 
+}
+
+.produtos {
+    flex: 1; 
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.produto {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.produto img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.detalhes-produto h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.detalhes-produto p {
+    font-size: 14px;
+    color: #666;
+}
+
+.detalhes-produto span {
+    font-size: 16px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.categorias {
+    flex: 0.3; 
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; 
+    gap: 20px; 
+    padding-right: 20px;
+}
+
+.categoria {
+    background-color: white;
+    padding: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.categoria img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.categoria:hover {
+    transform: scale(1.1); 
+}
+
+.retangulo-dourado {
+    padding: 15px;
+    background-color: #fffbe6;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 70px;
+}
+
+.redes-sociais {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    background: linear-gradient(90deg, #f3e5ab, #f8f0d5); 
+    border-radius: 10px; 
+    padding: 20px; 
+    color: #333; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.redes-sociais .texto {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.redes-sociais h2 {
+    margin-bottom: 10px;
+}
+
+.icones-sociais img {
+    width: 40px;
+    margin: 0 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icones-sociais img:hover {
+    transform: scale(1.1);
+}
+
+.imagemai {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 20px;
+}
+
+.imagemai img {
+    max-width: 100%;
+    height: auto; 
+}
+
+
+    </style>
+</head>
 <body>
-    <header>
-        <div class="logo">LOGO</div>
-        <div class="search-bar">
+
+    
+    <cabeçalho>
+        <div class="logo" onclick="location.href = 'page3.html'">
+            <img src="img/Body club logo academia preto e branco.png" alt="Logo da Performance Plus+" />
+        </div>
+        <div class="barra-pesquisa">
             <input type="text" placeholder="Faça sua pesquisa">
             <button>🔍</button>
         </div>
-        <div class="cart">🛒</div>
-        
-    </header>
+        <div class="carrinho">🛒</div>
+    </cabeçalho>
 
+    
     <section class="banner">
-        <img src="img/Rectangle 25.png" alt="Academia" class="banner-img">
+        <img src="img/fundo.png" alt="Banner de Academia">
     </section>
 
-    <section class="promo">
-        <h2>Melhores Preços Com A gente!!</h2>
-        <div class="product-list">
-            <div class="product">
-                <img src="img/bermuda1.png" alt="Bermuda">   
-                <p>Bermuda esportiva com 5% de desconto!!</p>
-                <span>R$50,00</span>
+    <div class="conteúdo">
+     
+        <div class="categorias">
+            <div class="categoria" onclick="location.href='page2.html'">
+                <img src="img/TenisAdidas.png" alt="Tênis">
+                <p>Tênis</p>
             </div>
-            <div class="product">
-                <img src="img/Rectangle 7.png" alt="Camiseta">
-                <p>Camiseta dry-fit com 5% de desconto!!</p>
-                <span>R$80,00</span>
+            <div class="categoria" onclick="location.href='page2.html'">
+                <img src="img/garrafinha.png" alt="Garrafa">
+                <p>Garrafas</p>
+            </div>
+            <div class="categoria" onclick="location.href='page2.html'">
+                <img src="img/whey.png" alt="Whey">
+                <p>Whey</p>
             </div>
         </div>
-    </section>
-
-    <section class="categories">
-        <ul>
-            <li><a href="#">Tênis Esportivos</a></li>
-            <li><a href="#">Garrafas</a></li>
-            <li><a href="#">Whey's e Creatina</a></li>
-        </ul>
-    </section>
-
-    <section class="featured">
-        <img src="img/conjunto.png" alt="Conjunto esportivo" class="featured-product">
-    </section>
-
-    <footer>
-        <div class="footer-text">
-            <p>Confira nossas redes sociais!</p>
-            <div class="social-icons">
-                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="img/twitter.png" alt="X (Twitter)"></a>
+    
+       
+        <div class="produtos">
+            <div class="produto" onclick="location.href='page2.html'">
+                <img src="img/bermuda1.png" alt="Bermuda">
+                <h3>Bermuda Esportiva</h3>
+                <p>Material leve e confortável</p>
+                <span>R$ 50,00 - 5% de desconto!</span>
             </div>
+            <div class="produto" onclick="location.href=' page2.html'">
+                <img src="img/camiseta.png" alt="Camiseta">
+                <h3>Camiseta Dry-Fit</h3>
+                <p>Ideal para atividades físicas</p>
+                <span>R$ 80,00 - 5% de desconto!</span>
+            </div>
+        </div>
+    </div>
+    
+        <div class="imagemai">
+            <img src="img/conjunto.png" alt="Imagem 1">
+        
+        </div>
+
+    <footer class="redes-sociais">
+        <div class="texto">
+            <h2 onclick="location.href='page3.html'">Saiba Mais Sobre Nós!</h2>
+            <p>
+                Quer acompanhar todas as novidades e conhecer mais sobre o nosso trabalho? 
+                Siga nossas redes sociais e fique por dentro de ofertas, dicas e conteúdos exclusivos!
+            </p>
+        </div>
+        <div class="icones-sociais">
+            <p>Confira nossas redes sociais!</p>
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="img/twitter.png" alt="X (Twitter)"></a>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-        }
-        
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-        }
-
-        .search-bar input {
-            padding: 5px;
-            border-radius: 5px;
-            border: none;
-        }
-        
-        .search-bar button {
-            padding: 5px 10px;
-            background-color: #555;
-            border: none;
-            border-radius: 5px;
-            color: white;
-        }
-
-        .cart {
-            font-size: 1.5em;
-        }
-        
-        .banner {
-            width: 100%;
-            height: 300px;
-        }
-
-        .banner-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .promo {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .promo h2 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-
-        .product-list {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        
-        .product {
-            background-color: white;
-            border-radius: 10px;
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .product img {
-            width: 100px;
-            height: 100px;
-        }
-
-        .product p {
-            font-size: 0.9em;
-            margin: 10px 0;
-        }
-
-        .product span {
-            font-weight: bold;
-            color: #e74c3c;
-        }
-
-
-        
-
-    </style>
 </html>
